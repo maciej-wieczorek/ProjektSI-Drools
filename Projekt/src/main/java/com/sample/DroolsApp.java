@@ -4,7 +4,7 @@ import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
-public class Main {
+public class DroolsApp {
 
     public static final void main(String[] args) {
         try {
@@ -13,10 +13,10 @@ public class Main {
     	    KieContainer kContainer = ks.getKieClasspathContainer();
         	KieSession kSession = kContainer.newKieSession("ksession-rules");
 
+            // go !
             kSession.fireAllRules();
         } catch (Throwable t) {
             t.printStackTrace();
-            
         }
     }
 }

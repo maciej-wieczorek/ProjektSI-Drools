@@ -1,0 +1,19 @@
+package com.sample;
+import com.sample.Node
+
+function String askQuestion(String q) {
+	System.out.println(q + "?");
+	// get answer
+	// return answer
+	return "";
+}
+
+
+rule "Initial question"
+    when
+    then
+    	String q = "Dress or pants";
+    	String a = askQuestion(q);
+		Node node = new Node(q, a);
+    	insert(node);
+end
