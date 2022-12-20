@@ -1,19 +1,27 @@
 package com.sample;
 import com.sample.Node
-
-function String askQuestion(String q) {
-	System.out.println(q + "?");
-	// get answer
-	// return answer
-	return "";
-}
-
+import com.sample.IOController
 
 rule "Initial question"
     when
     then
-    	String q = "Dress or pants";
-    	String a = askQuestion(q);
-		Node node = new Node(q, a);
+    	String question = "Dress or pants";
+    	String[] choices = {"dress", "pants"};
+    	String answer = IOController.askQuestion(question, choices);
+		Node node = new Node(question, answer);
     	insert(node);
+end
+
+rule "Dress exists"
+    when
+    	Node(q == "Dress or pants" && a == "dress")
+    then
+    	IOController.print("Dress exists");
+end
+
+rule "Pants exist"
+    when
+    	Node(q == "Dress or pants" && a == "pants")
+    then
+    	IOController.print("Pants exist");
 end
