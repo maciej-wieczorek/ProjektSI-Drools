@@ -4,6 +4,7 @@ import com.sample.IOController
 
 rule "CAN WE SEE YOUR CRACK?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
 
         String question = "CAN WE SEE YOUR CRACK";
@@ -44,6 +45,7 @@ end
 
 rule "ARE THEY MADE OF DENIM?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
         String question = "ARE THEY MADE OF DENIM";
     	String[] choices = {"NO", "YES"};
@@ -133,6 +135,7 @@ end
 
 rule "DO THEY HAVE POCKETS?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
         String question = "DO THEY HAVE POCKETS";
     	String[] choices = {"NO", "YES"};
@@ -199,6 +202,7 @@ end
 
 rule "ARE YOU SPORTING A CAMEL TOE?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
         String question = "ARE YOU SPORTING A CAMEL TOE";
     	String[] choices = {"NO", "YES", "MAYBE?"};
@@ -234,6 +238,7 @@ end
 
 rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
         String question = "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR";
     	String[] choices = {"NO", "YES"};
@@ -280,6 +285,7 @@ end
 
 rule "CAN YOU WEAR THEM TO YOGA?"
     when
+    	Node(q == "Dress or pants" && a == "pants")
     then
         String question = "CAN YOU WEAR THEM TO YOGA";
     	String[] choices = {"NO", "YES"};

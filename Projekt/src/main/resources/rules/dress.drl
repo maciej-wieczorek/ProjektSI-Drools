@@ -4,6 +4,7 @@ import com.sample.IOController
 
 rule "CAN WE SEE YOUR LADY PARTS?"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
         String question = "CAN WE SEE YOUR LADY PARTS";
         String[] choices = {"NO", "YES"};
@@ -42,6 +43,7 @@ end
 // -----------------------------------------------------------------------------
 rule "DOES IT FALL PAST YOUR FINGER TIPS?"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
         String question = "CAN WE SEE YOUR LADY PARTS";
         String[] choices = {"NO", "YES"};
@@ -133,6 +135,7 @@ end
 
 rule "IS IT FLOWY AND HITS APPROXIMATELY MID"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
         String question =  "IS IT FLOWY AND HITS APPROXIMATELY MID";
         String[] choices = {"NO", "YES"};
@@ -197,6 +200,7 @@ end
 // --------------------------------------------------------------------------
 rule "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
         String question =  "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP";
         String[] choices = {"NO", "YES", "MAYBE?"};
@@ -231,6 +235,7 @@ end
 
 rule "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
 
         String question =  "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES";
@@ -279,6 +284,7 @@ end
 
 rule "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?"
     when
+    	Node(q == "Dress or pants" && a == "dress")
     then
         String question =  "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP";
         String[] choices = {"NO", "YES"};
