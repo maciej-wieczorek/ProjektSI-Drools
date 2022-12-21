@@ -146,7 +146,7 @@ end
 
 rule "DO THEY HAVE POCKETS? - NO - ARE THEY SLACKS?"
     when
-        Node(question == "DO THEY HAVE POCKETS?" && answer == "NO")
+        Node(question == "DO THEY HAVE POCKETS" && answer == "NO")
     then
     	Node node  = new Node();
         node.setQuestion("ARE THEY SLACKS");
@@ -174,7 +174,7 @@ end
 
 rule "DO THEY HAVE POCKETS? - YES - ARE THE POCKETS PAINTED ON IN GOLD GLITTER?"
     when
-        Node(question == "DO THEY HAVE POCKETS?" && answer == "YES")
+        Node(question == "DO THEY HAVE POCKETS" && answer == "YES")
     then
     	Node node  = new Node();
         node.setQuestion("ARE THE POCKETS PAINTED ON IN GOLD GLITTER");
@@ -342,7 +342,7 @@ end
 
 rule "ARE YOU COMING FROM OR GOING TO YOGA? - YES - NAMASTE."
     when
-        Node(question == "ARE YOU COMING FROM OR GOING TO YOGA?" && answer == "YES")
+        Node(question == "ARE YOU COMING FROM OR GOING TO YOGA" && answer == "YES")
     then
         showFinalMessage("NAMASTE.");
 end

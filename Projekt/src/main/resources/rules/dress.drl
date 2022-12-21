@@ -59,7 +59,7 @@ rule "DOES IT FALL PAST YOUR FINGER TIPS? - NO - DID YOU DRY IT ON HIGH HEAT?"
         Node(question == "DOES IT FALL PAST YOUR FINGER TIPS" && answer == "NO")        
     then
     	Node node  = new Node();
-        node.setQuestion( "DID YOU DRY IT ON HIGH HEAT");
+        node.setQuestion("DID YOU DRY IT ON HIGH HEAT");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -87,7 +87,7 @@ rule "DID YOU DRY IT ON HIGH HEAT? - YES - DID YOU BUY IT FOR $20 FROM FOREVER 2
         Node(question == "DID YOU DRY IT ON HIGH HEAT" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion( "DID YOU BUY IT FOR $20 FROM FOREVER 21");
+        node.setQuestion("DID YOU BUY IT FOR $20 FROM FOREVER 21");
         String[] options = {"YES", "NO"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -97,10 +97,10 @@ end
 
 rule "DOES IT FALL PAST YOUR FINGER TIPS? - YES - DOES YOUR TRUSH STICK TO THE SUBWAY SEAT WHEN YOU SIT?"
     when
-        Node(question == "DOES IT FALL PAST YOUR FINGER TIPS?" && answer == "YES")
+        Node(question == "DOES IT FALL PAST YOUR FINGER TIPS" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion( "DOES YOUR TRUSH STICK TO THE SUBWAY SEAT WHEN YOU SIT");
+        node.setQuestion("DOES YOUR TRUSH STICK TO THE SUBWAY SEAT WHEN YOU SIT");
         String[] options = {"NO","YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -129,7 +129,7 @@ rule "IS IT FLOWY AND HITS APPROXIMATELY MID"
 		Node(question == "Choose question" && answer == "IS IT FLOWY AND HITS APPROXIMATELY MID")
     then
     	Node node  = new Node();
-        node.setQuestion( "IS IT FLOWY AND HITS APPROXIMATELY MID");
+        node.setQuestion("IS IT FLOWY AND HITS APPROXIMATELY MID");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -142,7 +142,7 @@ rule "IS IT FLOWY AND HITS APPROXIMATELY MID - NO - ARE YOU GOING TO THE BEACH?"
         Node(question == "IS IT FLOWY AND HITS APPROXIMATELY MID" && answer == "NO")
     then
     	Node node  = new Node();
-        node.setQuestion( "ARE YOU GOING TO THE BEACH");
+        node.setQuestion("ARE YOU GOING TO THE BEACH");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -169,7 +169,7 @@ rule "IS IT FLOWY AND HITS APPROXIMATELY MID - YES - ARE YOU BARE"
         Node(question == "IS IT FLOWY AND HITS APPROXIMATELY MID" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion( "ARE YOU BARE");
+        node.setQuestion("ARE YOU BARE");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -197,7 +197,7 @@ rule "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?"
 		Node(question == "Choose question" && answer == "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?")
     then
     	Node node  = new Node();
-        node.setQuestion( "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP");
+        node.setQuestion("IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP");
         String[] options = {"NO", "YES", "MAYBE?"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -233,7 +233,7 @@ rule "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?"
 		Node(question == "Choose question" && answer == "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?")
     then
 		Node node  = new Node();
-        node.setQuestion( "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES");
+        node.setQuestion("ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -254,7 +254,7 @@ rule "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES? - YES - ARE YOU BEYONCE OR 
         Node(question == "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion( "ARE YOU BEYONCE OR LADY GAGA");
+        node.setQuestion("ARE YOU BEYONCE OR LADY GAGA");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -283,7 +283,7 @@ rule "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW U
 		Node(question == "Choose question" && answer == "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?")
     then
     	Node node  = new Node();
-        node.setQuestion( "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP");
+        node.setQuestion("DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -296,7 +296,7 @@ rule "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW U
         Node(question == "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP" && answer == "NO")
     then
     	Node node  = new Node();
-        node.setQuestion( "ARE YOU DOING A WALK OF SHAME");
+        node.setQuestion("ARE YOU DOING A WALK OF SHAME");
         String[] options = {"YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -316,7 +316,7 @@ rule "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW U
         Node(question == "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion( "ARE YOU MARILYN MONROE");
+        node.setQuestion("ARE YOU MARILYN MONROE");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
