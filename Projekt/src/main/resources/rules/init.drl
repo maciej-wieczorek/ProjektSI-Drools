@@ -11,17 +11,3 @@ rule "Initial question"
 		Node node = new Node(question, answer);
     	insert(node);
 end
-
-rule "Dress exists"
-    when
-    	Node(q == "Dress or pants" && a == "dress")
-    then
-    	IOController.print("Dress exists");
-end
-
-rule "Pants exist"
-    when
-    	Node(q == "Dress or pants" && a == "pants")
-    then
-    	IOController.print("Pants exist");
-end
