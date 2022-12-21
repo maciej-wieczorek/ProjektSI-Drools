@@ -4,13 +4,13 @@ import com.sample.IOController
 
 rule "CAN WE SEE YOUR LADY PARTS?"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+    	Node(q == "Choose question" && a == "CAN WE SEE YOUR LADY PARTS?")
     then
         String question = "CAN WE SEE YOUR LADY PARTS";
         String[] choices = {"NO", "YES"};
         String answer = IOController.askQuestion(question, choices);    
         Node node  = new Node(question, answer);
-        
+
     	insert (node);
 end
 
@@ -29,7 +29,7 @@ rule "CAN WE SEE YOUR LADY PARTS? - YES - YES, BUT ONLY IN BRIGHT LITGHT OR WHEN
         String[] choices = {"EXATLY"};
         String answer = IOController.askQuestion(question, choices);    
         Node node  = new Node(question, answer);
-        
+
         insert (node);
 end
 
@@ -43,9 +43,9 @@ end
 // -----------------------------------------------------------------------------
 rule "DOES IT FALL PAST YOUR FINGER TIPS?"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+		Node(q == "Choose question" && a == "DOES IT FALL PAST YOUR FINGER TIPS?")
     then
-        String question = "CAN WE SEE YOUR LADY PARTS";
+        String question = "DOES IT FALL PAST YOUR FINGER TIPS";
         String[] choices = {"NO", "YES"};
         String answer = IOController.askQuestion(question, choices);    
         Node node  = new Node(question, answer);
@@ -72,19 +72,6 @@ rule "DID YOU DRY IT ON HIGH HEAT? - NO - NEXT TIME, TAKE A FRIEND SHOPPING. YOU
         IOController.print("NEXT TIME, TAKE A FRIEND SHOPPING. YOU GOT SERIOUSLY RIPPED OFF.");
 end
 
-// the same conditions?
-rule "DID YOU DRY IT ON HIGH HEAT? - NO - DID YOU BUY IT FOR $20 FROM FOREVER 21?"
-    when
-        Node(q == "DID YOU DRY IT ON HIGH HEAT" && a == "NO")
-    then
-        String question =  "DID YOU BUY IT FOR $20 FROM FOREVER 21";
-        String[] choices = {"YES"};
-        String answer = IOController.askQuestion(question, choices);    
-        Node node  = new Node(question, answer);
-        
-        insert (node);
-end
-
 rule "DID YOU BUY IT FOR $20 FROM FOREVER 21? - YES - SORRY HUN THAT IS NO LONGER A DRESS."
     when
         Node(q == "DID YOU BUY IT FOR $20 FROM FOREVER 21" && a == "YES")
@@ -98,7 +85,7 @@ rule "DID YOU DRY IT ON HIGH HEAT? - YES - DID YOU BUY IT FOR $20 FROM FOREVER 2
         Node(q == "DID YOU DRY IT ON HIGH HEAT" && a == "YES")
     then
         String question =  "DID YOU BUY IT FOR $20 FROM FOREVER 21";
-        String[] choices = {"YES"};
+        String[] choices = {"YES", "NO"};
         String answer = IOController.askQuestion(question, choices);    
         Node node  = new Node(question, answer);
         
@@ -135,7 +122,7 @@ end
 
 rule "IS IT FLOWY AND HITS APPROXIMATELY MID"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+		Node(q == "Choose question" && a == "IS IT FLOWY AND HITS APPROXIMATELY MID")
     then
         String question =  "IS IT FLOWY AND HITS APPROXIMATELY MID";
         String[] choices = {"NO", "YES"};
@@ -200,7 +187,7 @@ end
 // --------------------------------------------------------------------------
 rule "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+		Node(q == "Choose question" && a == "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?")
     then
         String question =  "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP";
         String[] choices = {"NO", "YES", "MAYBE?"};
@@ -235,7 +222,7 @@ end
 
 rule "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+		Node(q == "Choose question" && a == "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?")
     then
 
         String question =  "ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES";
@@ -284,7 +271,7 @@ end
 
 rule "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?"
     when
-    	Node(q == "Dress or pants" && a == "dress")
+		Node(q == "Choose question" && a == "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?")
     then
         String question =  "DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP";
         String[] choices = {"NO", "YES"};

@@ -8,6 +8,43 @@ rule "Initial question"
     	String question = "Dress or pants";
     	String[] choices = {"dress", "pants"};
     	String answer = IOController.askQuestion(question, choices);
+    	
+		Node node = new Node(question, answer);
+    	insert(node);
+end
+
+rule "Choose path dress"
+    when
+    	Node(q == "Dress or pants" && a == "dress")
+    then
+    	String question = "Choose question";
+    	String[] choices = {"CAN WE SEE YOUR LADY PARTS?",
+    		"DOES IT FALL PAST YOUR FINGER TIPS?",
+    		"IS IT FLOWY AND HITS APPROXIMATELY MID",
+    		"IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?",
+    		"ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?",
+    		"DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?"
+    	};
+    	String answer = IOController.askQuestion(question, choices);
+    	
+		Node node = new Node(question, answer);
+    	insert(node);
+end
+
+rule "Choose path pants"
+    when
+    	Node(q == "Dress or pants" && a == "pants")
+    then
+    	String question = "Choose question";
+    	String[] choices = {"CAN WE SEE YOUR CRACK?",
+    		"ARE THEY MADE OF DENIM?",
+    		"DO THEY HAVE POCKETS?",
+    		"ARE YOU SPORTING A CAMEL TOE?",
+    		"ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?",
+    		"CAN YOU WEAR THEM TO YOGA?"
+    	};
+    	String answer = IOController.askQuestion(question, choices);
+    	
 		Node node = new Node(question, answer);
     	insert(node);
 end

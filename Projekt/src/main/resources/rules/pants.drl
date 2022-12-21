@@ -4,7 +4,7 @@ import com.sample.IOController
 
 rule "CAN WE SEE YOUR CRACK?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "CAN WE SEE YOUR CRACK?")
     then
 
         String question = "CAN WE SEE YOUR CRACK";
@@ -45,7 +45,7 @@ end
 
 rule "ARE THEY MADE OF DENIM?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "ARE THEY MADE OF DENIM?")
     then
         String question = "ARE THEY MADE OF DENIM";
     	String[] choices = {"NO", "YES"};
@@ -135,7 +135,7 @@ end
 
 rule "DO THEY HAVE POCKETS?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "DO THEY HAVE POCKETS?")
     then
         String question = "DO THEY HAVE POCKETS";
     	String[] choices = {"NO", "YES"};
@@ -202,7 +202,7 @@ end
 
 rule "ARE YOU SPORTING A CAMEL TOE?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "ARE YOU SPORTING A CAMEL TOE?")
     then
         String question = "ARE YOU SPORTING A CAMEL TOE";
     	String[] choices = {"NO", "YES", "MAYBE?"};
@@ -238,7 +238,7 @@ end
 
 rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?")
     then
         String question = "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR";
     	String[] choices = {"NO", "YES"};
@@ -285,7 +285,7 @@ end
 
 rule "CAN YOU WEAR THEM TO YOGA?"
     when
-    	Node(q == "Dress or pants" && a == "pants")
+		Node(q == "Choose question" && a == "CAN YOU WEAR THEM TO YOGA?")
     then
         String question = "CAN YOU WEAR THEM TO YOGA";
     	String[] choices = {"NO", "YES"};
