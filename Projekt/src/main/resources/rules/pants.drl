@@ -13,14 +13,14 @@ rule "CAN WE SEE YOUR CRACK?"
     	insert(node);
 end
 
-rule "CAN WE SEE YOUR CRACK? - NO - EXCELLENT! CRACK IS WHACK."
+rule "CAN WE SEE YOUR CRACK? - NO"
     when
         Node(question == "CAN WE SEE YOUR CRACK" && answer == "NO")
     then
         showFinalMessage("EXCELLENT! CRACK IS WHACK.");
 end
 
-rule "CAN WE SEE YOUR CRACK? - YES - YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER?"
+rule "CAN WE SEE YOUR CRACK? - YES"
     when
         Node(question == "CAN WE SEE YOUR CRACK" && answer == "YES")
     then
@@ -33,7 +33,7 @@ rule "CAN WE SEE YOUR CRACK? - YES - YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU B
     	insert(node);
 end
 
-rule "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER? - EXACTLY! - SORRY. BUT NO HONORABLE PAIR OF PANTS WOULD DO THAT TO YOU."
+rule "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER? - EXACTLY!"
     when
         Node(question == "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER" && answer == "EXACTLY!")
     then
@@ -55,7 +55,7 @@ rule "ARE THEY MADE OF DENIM?"
     	insert(node);
 end
 
-rule "ARE THEY MADE OF DENIM? - NO - IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%?"
+rule "ARE THEY MADE OF DENIM? - NO"
     when
         Node(question == "ARE THEY MADE OF DENIM" && answer == "NO")
     then
@@ -68,14 +68,14 @@ rule "ARE THEY MADE OF DENIM? - NO - IS THE LYCRA/SPANDEX % HIGHER THAN THE COTT
     	insert(node);
 end
 
-rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - NO - THAT'S A GOOD SIGN!"
+rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - NO"
     when
         Node(question == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && answer == "NO")
     then
         showFinalMessage("THAT'S A GOOD SIGN!");
 end
 
-rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - YES - ARE THEY CONTROL TOP"
+rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - YES"
     when
         Node(question == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && answer == "YES")
     then
@@ -88,21 +88,21 @@ rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - YES - ARE THEY CONTROL T
     	insert(node);
 end
 
-rule "ARE THEY CONTROL TOP - YES - GAAAH, YOU'RE WEARING TIGHTS!"
+rule "ARE THEY CONTROL TOP - YES"
     when
         Node(question == "ARE THEY CONTROL TOP" && answer == "YES")
     then
         showFinalMessage("GAAAH, YOU'RE WEARING TIGHTS!");
 end
 
-rule "ARE THEY CONTROL TOP - NO - THAT'S A GOOD SIGN!"
+rule "ARE THEY CONTROL TOP - NO"
     when
         Node(question == "ARE THEY CONTROL TOP" && answer == "NO")
     then
          showFinalMessage("THAT'S A GOOD SIGN!");
 end
 
-rule "ARE THEY MADE OF DENIM? - YES - BE HONEST IS IT STRETCHY JEGGING DENIM?"
+rule "ARE THEY MADE OF DENIM? - YES"
     when
         Node(question == "ARE THEY MADE OF DENIM" && answer == "YES")
     then
@@ -115,14 +115,14 @@ rule "ARE THEY MADE OF DENIM? - YES - BE HONEST IS IT STRETCHY JEGGING DENIM?"
     	insert(node);
 end
 
-rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - NO - HUZZAH! YOU'RE PROBABLY WEARING PANTS."
+rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - NO"
     when
         Node(question == "BE HONEST IS IT STRETCHY JEGGING DENIM" && answer == "NO")
     then
         showFinalMessage("HUZZAH! YOU'RE PROBABLY WEARING PANTS.");
 end
 
-rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - YES - JEGGINS ARE NOT PANTS. PLEASE PUT ON SOME PANTS."
+rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - YES"
     when
         Node(question == "BE HONEST IS IT STRETCHY JEGGING DENIM" && answer == "YES")
     then
@@ -144,7 +144,7 @@ rule "DO THEY HAVE POCKETS?"
     	insert(node);
 end
 
-rule "DO THEY HAVE POCKETS? - NO - ARE THEY SLACKS?"
+rule "DO THEY HAVE POCKETS? - NO"
     when
         Node(question == "DO THEY HAVE POCKETS" && answer == "NO")
     then
@@ -157,14 +157,14 @@ rule "DO THEY HAVE POCKETS? - NO - ARE THEY SLACKS?"
     	insert(node);
 end
 
-rule "ARE THEY SLACKS? - NO - SOUND SUSPECT, THESE ARE LIKELY LEGGINGS, NOT PANTS."
+rule "ARE THEY SLACKS? - NO."
     when
         Node(question == "ARE THEY SLACKS" && answer == "NO")
     then
         showFinalMessage("SOUND SUSPECT, THESE ARE LIKELY LEGGINGS, NOT PANTS.");
 end
 
-rule "ARE THEY SLACKS? - YES - LOOK AT YOU, MISS FANCY PANTS!"
+rule "ARE THEY SLACKS? - YES"
     when
         Node(question == "ARE THEY SLACKS" && answer == "YES")
     then
@@ -172,7 +172,7 @@ rule "ARE THEY SLACKS? - YES - LOOK AT YOU, MISS FANCY PANTS!"
 end
 
 
-rule "DO THEY HAVE POCKETS? - YES - ARE THE POCKETS PAINTED ON IN GOLD GLITTER?"
+rule "DO THEY HAVE POCKETS? - YES"
     when
         Node(question == "DO THEY HAVE POCKETS" && answer == "YES")
     then
@@ -185,14 +185,14 @@ rule "DO THEY HAVE POCKETS? - YES - ARE THE POCKETS PAINTED ON IN GOLD GLITTER?"
     	insert(node);
 end
 
-rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - YES - SOUNDS SUSPECT, THESE ARE LIKELY LEGGINGS NOT PANTS."
+rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - YES"
     when
         Node(question == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && answer == "YES")
     then
         showFinalMessage("SOUNDS SUSPECT, THESE ARE LIKELY LEGGINGS NOT PANTS.");
 end
 
-rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - NO - HUZZAH! YOU'RE PROBABLY WEARING PANTS."
+rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - NO"
     when
         Node(question == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && answer == "NO")
     then
@@ -214,21 +214,21 @@ rule "ARE YOU SPORTING A CAMEL TOE?"
     	insert(node);
 end
 
-rule "ARE YOU SPORTING A CAMEL TOE? - NO - THANK GOODENESS!"
+rule "ARE YOU SPORTING A CAMEL TOE? - NO!"
     when
         Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "NO")
     then
         showFinalMessage("THANK GOODENESS!");
 end
 
-rule "ARE YOU SPORTING A CAMEL TOE? - YES - WHATEVER YOU'RE WEARING IS NOT YOUR FRIEND."
+rule "ARE YOU SPORTING A CAMEL TOE? - YES"
     when
         Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "YES")
     then
         showFinalMessage("WHATEVER YOU'RE WEARING IS NOT YOUR FRIEND.");
 end
 
-rule "ARE YOU SPORTING A CAMEL TOE? - MAYBE? - NOT A GOOD SIGN! ASK AN HONEST FRIEND FOR THEIR OPINION."
+rule "ARE YOU SPORTING A CAMEL TOE? - MAYBE?."
     when
         Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "MAYBE?")
     then
@@ -251,14 +251,14 @@ rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?"
     	insert(node);
 end
 
-rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - NO - PHEW! THAT WOULD BE EMBARASSING."
+rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - NO"
     when
         Node(question == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && answer == "NO")
     then
         showFinalMessage("PHEW! THAT WOULD BE EMBARASSING.");
 end
 
-rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - YES - ARE YOU A LINGERINE MODEL?"
+rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - YES"
     when
         Node(question == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && answer == "YES")
     then
@@ -271,14 +271,14 @@ rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - YES - ARE YOU A LINGERINE
     	insert(node);
 end
 
-rule "ARE YOU A LINGERINE MODEL? - NO - PLEASE PUT ON SOME PANTS."
+rule "ARE YOU A LINGERINE MODEL? - NO"
     when
         Node(question == "ARE YOU A LINGERINE MODEL" && answer == "NO")
     then
         showFinalMessage("PLEASE PUT ON SOME PANTS.");
 end
 
-rule "ARE YOU A LINGERINE MODEL? - YES - COOL JOB! PLEASE PUT PANTS ON BEFORE LEAVING WORK."
+rule "ARE YOU A LINGERINE MODEL? - YES"
     when
         Node(question == "ARE YOU A LINGERINE MODEL" && answer == "YES")
     then
@@ -300,7 +300,7 @@ rule "CAN YOU WEAR THEM TO YOGA?"
     	insert(node);
 end
 
-rule "CAN YOU WEAR THEM TO YOGA? - NO - DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET?"
+rule "CAN YOU WEAR THEM TO YOGA? - NO"
     when
         Node(question == "CAN YOU WEAR THEM TO YOGA" && answer == "NO")
     then
@@ -313,14 +313,14 @@ rule "CAN YOU WEAR THEM TO YOGA? - NO - DID YOU BUY THEM AT GAP BODY OR VICTORIA
     	insert(node);
 end
 
-rule "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET? - NO - PATNS POTENTIAL = HIGH"
+rule "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET? - NO"
     when
         Node(question == "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET" && answer == "NO")
     then
         showFinalMessage("PATNS POTENTIAL = HIGH");
 end
 
-rule "CAN YOU WEAR THEM TO YOGA? - YES - ARE YOU COMING FROM OR GOING TO YOGA?"
+rule "CAN YOU WEAR THEM TO YOGA? - YES"
     when
         Node(question == "CAN YOU WEAR THEM TO YOGA" && answer == "YES")
     then
@@ -333,14 +333,14 @@ rule "CAN YOU WEAR THEM TO YOGA? - YES - ARE YOU COMING FROM OR GOING TO YOGA?"
     	insert(node);
 end
 
-rule "ARE YOU COMING FROM OR GOING TO YOGA? - NO - MOST PANTS AREN'T DOWNWARD DOG FRIENDLY"
+rule "ARE YOU COMING FROM OR GOING TO YOGA? - NO"
     when
         Node(question == "ARE YOU COMING FROM OR GOING TO YOGA" && answer == "NO")
     then
         showFinalMessage("MOST PANTS AREN'T DOWNWARD DOG FRIENDLY");
 end
 
-rule "ARE YOU COMING FROM OR GOING TO YOGA? - YES - NAMASTE."
+rule "ARE YOU COMING FROM OR GOING TO YOGA? - YES"
     when
         Node(question == "ARE YOU COMING FROM OR GOING TO YOGA" && answer == "YES")
     then

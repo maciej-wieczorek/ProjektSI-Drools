@@ -11,14 +11,20 @@ declare Node
 end
 
 function void setAnswerGUI(Node node) {
-	int response = -1;
-	while (response < 0 || response >= node.getOptions().length)
-	{
-		response = JOptionPane.showOptionDialog(null, node.getQuestion(), null,
+	int	response = JOptionPane.showOptionDialog(null, node.getQuestion(), null,
 	        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 	        null, node.getOptions(), node.getOptions()[0]);
-    }
-    
+    if (response == -1)
+		System.exit(-1);
+    node.setAnswer(node.getOptions()[response]);
+}
+
+function void setAnswerGUIVertical(Node node, String message, String[] shortOptions) {
+	int response = JOptionPane.showOptionDialog(null, message, null,
+	        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+	        null, shortOptions, shortOptions[0]);
+	if (response == -1)
+		System.exit(-1);
     node.setAnswer(node.getOptions()[response]);
 }
 

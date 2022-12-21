@@ -27,7 +27,16 @@ rule "Choose path dress"
     		"DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?"
     	};
     	node.setOptions(options);
-    	setAnswerGUI(node);
+    	
+    	String verticalMessage = "Choose question\n"+
+    		"1: CAN WE SEE YOUR LADY PARTS?\n"+
+    		"2: DOES IT FALL PAST YOUR FINGER TIPS?\n"+
+    		"3: IS IT FLOWY AND HITS APPROXIMATELY MID?\n"+
+    		"4: IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP?\n"+
+    		"5: ARE YOU GETTING AN UNUSUAL NUMBER OF WHISTLES?\n"+
+    		"6: DO YOU FIND YOURSELF AVOIDING SEWER GRATES FOR FEAR YOUR DRESS WILL BLOW UP?";
+    	String[] shortOptions = {"1", "2", "3", "4", "5", "6"};
+    	setAnswerGUIVertical(node, verticalMessage, shortOptions);
     	
     	insert(node);
 end
@@ -46,7 +55,16 @@ rule "Choose path pants"
     		"CAN YOU WEAR THEM TO YOGA?"
     	};
     	node.setOptions(options);
-    	setAnswerGUI(node);
+    	
+    	String verticalMessage = "Choose question\n"+
+    		"1: CAN WE SEE YOUR CRACK?\n"+
+    		"2: ARE THEY MADE OF DENIM?\n"+
+    		"3: DO THEY HAVE POCKETS?\n"+
+    		"4: ARE YOU SPORTING A CAMEL TOE?\n"+
+    		"5: ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?\n"+
+    		"6: CAN YOU WEAR THEM TO YOGA?";
+    	String[] shortOptions = {"1", "2", "3", "4", "5", "6"};
+    	setAnswerGUIVertical(node, verticalMessage, shortOptions);
 
     	insert(node);
 end
