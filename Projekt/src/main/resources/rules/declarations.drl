@@ -1,0 +1,30 @@
+package com.sample;
+import javax.swing.JOptionPane
+import javax.swing.JDialog
+import javax.swing.JPanel
+import javax.swing.JButton
+
+declare Node
+   question : String
+   options: String []
+   answer : String
+end
+
+function void setAnswerGUI(Node node) {
+	int response = -1;
+	while (response < 0 || response >= node.getOptions().length)
+	{
+		response = JOptionPane.showOptionDialog(null, node.getQuestion(), null,
+	        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+	        null, node.getOptions(), node.getOptions()[0]);
+    }
+    
+    node.setAnswer(node.getOptions()[response]);
+}
+
+function void showFinalMessage(String message) {
+	String[] options = {"OK"};
+	int response = JOptionPane.showOptionDialog(null, message, null,
+        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+        null, options, options[0]);
+}

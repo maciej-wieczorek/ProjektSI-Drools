@@ -1,231 +1,238 @@
 package com.sample;
-import com.sample.Node
-import com.sample.IOController
 
 rule "CAN WE SEE YOUR CRACK?"
     when
-		Node(q == "Choose question" && a == "CAN WE SEE YOUR CRACK?")
+		Node(question == "Choose question" && answer == "CAN WE SEE YOUR CRACK?")
     then
-
-        String question = "CAN WE SEE YOUR CRACK";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
-
+    	Node node  = new Node();
+        node.setQuestion("CAN WE SEE YOUR CRACK");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
+		
     	insert(node);
 end
 
 rule "CAN WE SEE YOUR CRACK? - NO - EXCELLENT! CRACK IS WHACK."
     when
-        Node(q == "CAN WE SEE YOUR CRACK" && a == "NO")
+        Node(question == "CAN WE SEE YOUR CRACK" && answer == "NO")
     then
-        IOController.print("EXCELLENT! CRACK IS WHACK.");
+        showFinalMessage("EXCELLENT! CRACK IS WHACK.");
 end
 
 rule "CAN WE SEE YOUR CRACK? - YES - YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER?"
     when
-        Node(q == "CAN WE SEE YOUR CRACK" && a == "YES")
+        Node(question == "CAN WE SEE YOUR CRACK" && answer == "YES")
     then
-        String question = "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER";
-    	String[] choices = {"EXACTLY!"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER");
+    	String[] options = {"EXACTLY!"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER? - EXACTLY! - SORRY. BUT NO HONORABLE PAIR OF PANTS WOULD DO THAT TO YOU."
     when
-        Node(q == "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER" && a == "EXACTLY!")
+        Node(question == "YES. BUT ONLY IN BRIGHT LIGHT OR WHEN YOU BEND OVER" && answer == "EXACTLY!")
     then
-        IOController.print("SORRY. BUT NO HONORABLE PAIR OF PANTS WOULD DO THAT TO YOU.");
+        showFinalMessage("SORRY. BUT NO HONORABLE PAIR OF PANTS WOULD DO THAT TO YOU.");
 end
 
 // -------------------------------------------------------------------------------------------------
 
 rule "ARE THEY MADE OF DENIM?"
     when
-		Node(q == "Choose question" && a == "ARE THEY MADE OF DENIM?")
+		Node(question == "Choose question" && answer == "ARE THEY MADE OF DENIM?")
     then
-        String question = "ARE THEY MADE OF DENIM";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE THEY MADE OF DENIM");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE THEY MADE OF DENIM? - NO - IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%?"
     when
-        Node(q == "ARE THEY MADE OF DENIM" && a == "NO")
+        Node(question == "ARE THEY MADE OF DENIM" && answer == "NO")
     then
-        String question = "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - NO - THAT'S A GOOD SIGN!"
     when
-        Node(q == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && a == "NO")
+        Node(question == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && answer == "NO")
     then
-        IOController.print("THAT'S A GOOD SIGN!");
+        showFinalMessage("THAT'S A GOOD SIGN!");
 end
 
 rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - YES - ARE THEY CONTROL TOP"
     when
-        Node(q == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && a == "YES")
+        Node(question == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && answer == "YES")
     then
-        String question = "ARE THEY CONTROL TOP";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE THEY CONTROL TOP");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE THEY CONTROL TOP - YES - GAAAH, YOU'RE WEARING TIGHTS!"
     when
-        Node(q == "ARE THEY CONTROL TOP" && a == "YES")
+        Node(question == "ARE THEY CONTROL TOP" && answer == "YES")
     then
-        IOController.print("GAAAH, YOU'RE WEARING TIGHTS!");
+        showFinalMessage("GAAAH, YOU'RE WEARING TIGHTS!");
 end
 
 rule "ARE THEY CONTROL TOP - NO - THAT'S A GOOD SIGN!"
     when
-        Node(q == "ARE THEY CONTROL TOP" && a == "NO")
+        Node(question == "ARE THEY CONTROL TOP" && answer == "NO")
     then
-         IOController.print("THAT'S A GOOD SIGN!");
+         showFinalMessage("THAT'S A GOOD SIGN!");
 end
 
 rule "ARE THEY MADE OF DENIM? - YES - BE HONEST IS IT STRETCHY JEGGING DENIM?"
     when
-        Node(q == "ARE THEY MADE OF DENIM" && a == "YES")
+        Node(question == "ARE THEY MADE OF DENIM" && answer == "YES")
     then
-        String question = "BE HONEST IS IT STRETCHY JEGGING DENIM";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("BE HONEST IS IT STRETCHY JEGGING DENIM");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - NO - HUZZAH! YOU'RE PROBABLY WEARING PANTS."
     when
-        Node(q == "BE HONEST IS IT STRETCHY JEGGING DENIM" && a == "NO")
+        Node(question == "BE HONEST IS IT STRETCHY JEGGING DENIM" && answer == "NO")
     then
-        IOController.print("HUZZAH! YOU'RE PROBABLY WEARING PANTS.");
+        showFinalMessage("HUZZAH! YOU'RE PROBABLY WEARING PANTS.");
 end
 
 rule "BE HONEST IS IT STRETCHY JEGGING DENIM? - YES - JEGGINS ARE NOT PANTS. PLEASE PUT ON SOME PANTS."
     when
-        Node(q == "BE HONEST IS IT STRETCHY JEGGING DENIM" && a == "YES")
+        Node(question == "BE HONEST IS IT STRETCHY JEGGING DENIM" && answer == "YES")
     then
-        IOController.print("JEGGINS ARE NOT PANTS. PLEASE PUT ON SOME PANTS.");
+        showFinalMessage("JEGGINS ARE NOT PANTS. PLEASE PUT ON SOME PANTS.");
 end
 
 // ---------------------------------------------------------------------------------------------
 
 rule "DO THEY HAVE POCKETS?"
     when
-		Node(q == "Choose question" && a == "DO THEY HAVE POCKETS?")
+		Node(question == "Choose question" && answer == "DO THEY HAVE POCKETS?")
     then
-        String question = "DO THEY HAVE POCKETS";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
-
+    	Node node  = new Node();
+        node.setQuestion("DO THEY HAVE POCKETS");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
+		
     	insert(node);
 end
 
 rule "DO THEY HAVE POCKETS? - NO - ARE THEY SLACKS?"
     when
-        Node(q  == "DO THEY HAVE POCKETS?" && a == "NO")
+        Node(question == "DO THEY HAVE POCKETS?" && answer == "NO")
     then
-        String question = "ARE THEY SLACKS";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE THEY SLACKS");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE THEY SLACKS? - NO - SOUND SUSPECT, THESE ARE LIKELY LEGGINGS, NOT PANTS."
     when
-        Node(q == "ARE THEY SLACKS" && a == "NO")
+        Node(question == "ARE THEY SLACKS" && answer == "NO")
     then
-        IOController.print("SOUND SUSPECT, THESE ARE LIKELY LEGGINGS, NOT PANTS.");
+        showFinalMessage("SOUND SUSPECT, THESE ARE LIKELY LEGGINGS, NOT PANTS.");
 end
 
 rule "ARE THEY SLACKS? - YES - LOOK AT YOU, MISS FANCY PANTS!"
     when
-        Node(q == "ARE THEY SLACKS" && a == "YES")
+        Node(question == "ARE THEY SLACKS" && answer == "YES")
     then
-        IOController.print("LOOK AT YOU, MISS FANCY PANTS!");
+        showFinalMessage("LOOK AT YOU, MISS FANCY PANTS!");
 end
 
 
 rule "DO THEY HAVE POCKETS? - YES - ARE THE POCKETS PAINTED ON IN GOLD GLITTER?"
     when
-        Node(q == "DO THEY HAVE POCKETS?" && a == "YES")
+        Node(question == "DO THEY HAVE POCKETS?" && answer == "YES")
     then
-        String question = "ARE THE POCKETS PAINTED ON IN GOLD GLITTER";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE THE POCKETS PAINTED ON IN GOLD GLITTER");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - YES - SOUNDS SUSPECT, THESE ARE LIKELY LEGGINGS NOT PANTS."
     when
-        Node(q == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && a == "YES")
+        Node(question == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && answer == "YES")
     then
-        IOController.print("SOUNDS SUSPECT, THESE ARE LIKELY LEGGINGS NOT PANTS.");
+        showFinalMessage("SOUNDS SUSPECT, THESE ARE LIKELY LEGGINGS NOT PANTS.");
 end
 
 rule "ARE THE POCKETS PAINTED ON IN GOLD GLITTER? - NO - HUZZAH! YOU'RE PROBABLY WEARING PANTS."
     when
-        Node(q == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && a == "NO")
+        Node(question == "ARE THE POCKETS PAINTED ON IN GOLD GLITTER" && answer == "NO")
     then
-        IOController.print("HUZZAH! YOU'RE PROBABLY WEARING PANTS.");
+        showFinalMessage("HUZZAH! YOU'RE PROBABLY WEARING PANTS.");
 end
 
 // ---------------------------------------------------------------------------------------
 
 rule "ARE YOU SPORTING A CAMEL TOE?"
     when
-		Node(q == "Choose question" && a == "ARE YOU SPORTING A CAMEL TOE?")
+		Node(question == "Choose question" && answer == "ARE YOU SPORTING A CAMEL TOE?")
     then
-        String question = "ARE YOU SPORTING A CAMEL TOE";
-    	String[] choices = {"NO", "YES", "MAYBE?"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
-
+    	Node node  = new Node();
+        node.setQuestion("ARE YOU SPORTING A CAMEL TOE");
+    	String[] options = {"NO", "YES", "MAYBE?"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
+		
     	insert(node);
 end
 
 rule "ARE YOU SPORTING A CAMEL TOE? - NO - THANK GOODENESS!"
     when
-        Node(q == "ARE YOU SPORTING A CAMEL TOE" && a == "NO")
+        Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "NO")
     then
-        IOController.print("THANK GOODENESS!");
+        showFinalMessage("THANK GOODENESS!");
 end
 
 rule "ARE YOU SPORTING A CAMEL TOE? - YES - WHATEVER YOU'RE WEARING IS NOT YOUR FRIEND."
     when
-        Node(q == "ARE YOU SPORTING A CAMEL TOE" && a == "YES")
+        Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "YES")
     then
-        IOController.print("WHATEVER YOU'RE WEARING IS NOT YOUR FRIEND.");
+        showFinalMessage("WHATEVER YOU'RE WEARING IS NOT YOUR FRIEND.");
 end
 
 rule "ARE YOU SPORTING A CAMEL TOE? - MAYBE? - NOT A GOOD SIGN! ASK AN HONEST FRIEND FOR THEIR OPINION."
     when
-        Node(q == "ARE YOU SPORTING A CAMEL TOE" && a == "MAYBE?")
+        Node(question == "ARE YOU SPORTING A CAMEL TOE" && answer == "MAYBE?")
     then
-        IOController.print("NOT A GOOD SIGN! ASK AN HONEST FRIEND FOR THEIR OPINION.");
+        showFinalMessage("NOT A GOOD SIGN! ASK AN HONEST FRIEND FOR THEIR OPINION.");
 end
 
 // -----------------------------------------------------------------------------------------------------
@@ -233,105 +240,109 @@ end
 
 rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?"
     when
-		Node(q == "Choose question" && a == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?")
+		Node(question == "Choose question" && answer == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR?")
     then
-        String question = "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - NO - PHEW! THAT WOULD BE EMBARASSING."
     when
-        Node(q == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && a == "NO")
+        Node(question == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && answer == "NO")
     then
-        IOController.print("PHEW! THAT WOULD BE EMBARASSING.");
+        showFinalMessage("PHEW! THAT WOULD BE EMBARASSING.");
 end
 
 rule "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR? - YES - ARE YOU A LINGERINE MODEL?"
     when
-        Node(q == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && a == "YES")
+        Node(question == "ARE STRANGERS COMPLIMENTING ON YOUR UNDERWEAR" && answer == "YES")
     then
-        String question = "ARE YOU A LINGERINE MODEL";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE YOU A LINGERINE MODEL");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE YOU A LINGERINE MODEL? - NO - PLEASE PUT ON SOME PANTS."
     when
-        Node(q == "ARE YOU A LINGERINE MODEL" && a == "NO")
+        Node(question == "ARE YOU A LINGERINE MODEL" && answer == "NO")
     then
-        IOController.print("PLEASE PUT ON SOME PANTS.");
+        showFinalMessage("PLEASE PUT ON SOME PANTS.");
 end
 
 rule "ARE YOU A LINGERINE MODEL? - YES - COOL JOB! PLEASE PUT PANTS ON BEFORE LEAVING WORK."
     when
-        Node(q == "ARE YOU A LINGERINE MODEL" && a == "YES")
+        Node(question == "ARE YOU A LINGERINE MODEL" && answer == "YES")
     then
-        IOController.print("COOL JOB! PLEASE PUT PANTS ON BEFORE LEAVING WORK.");
+        showFinalMessage("COOL JOB! PLEASE PUT PANTS ON BEFORE LEAVING WORK.");
 end
 
 // -----------------------------------------------------------------------------------------------
 
 rule "CAN YOU WEAR THEM TO YOGA?"
     when
-		Node(q == "Choose question" && a == "CAN YOU WEAR THEM TO YOGA?")
+		Node(question == "Choose question" && answer == "CAN YOU WEAR THEM TO YOGA?")
     then
-        String question = "CAN YOU WEAR THEM TO YOGA";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("CAN YOU WEAR THEM TO YOGA");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "CAN YOU WEAR THEM TO YOGA? - NO - DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET?"
     when
-        Node(q == "CAN YOU WEAR THEM TO YOGA" && a == "NO")
+        Node(question == "CAN YOU WEAR THEM TO YOGA" && answer == "NO")
     then
-
-        String question = "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET";
-    	String[] choices = {"NO"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+		Node node  = new Node();
+        node.setQuestion("DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET");
+    	String[] options = {"NO"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET? - NO - PATNS POTENTIAL = HIGH"
     when
-        Node(q == "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET" && a == "NO")
+        Node(question == "DID YOU BUY THEM AT GAP BODY OR VICTORIA'S SECRET" && answer == "NO")
     then
-        IOController.print("PATNS POTENTIAL = HIGH");
+        showFinalMessage("PATNS POTENTIAL = HIGH");
 end
 
 rule "CAN YOU WEAR THEM TO YOGA? - YES - ARE YOU COMING FROM OR GOING TO YOGA?"
     when
-        Node(q == "CAN YOU WEAR THEM TO YOGA" && a == "YES")
+        Node(question == "CAN YOU WEAR THEM TO YOGA" && answer == "YES")
     then
-        String question = "ARE YOU COMING FROM OR GOING TO YOGA";
-    	String[] choices = {"NO", "YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
+    	Node node  = new Node();
+        node.setQuestion("ARE YOU COMING FROM OR GOING TO YOGA");
+    	String[] options = {"NO", "YES"};
+    	node.setOptions(options);
+    	setAnswerGUI(node);
 
     	insert(node);
 end
 
 rule "ARE YOU COMING FROM OR GOING TO YOGA? - NO - MOST PANTS AREN'T DOWNWARD DOG FRIENDLY"
     when
-        Node(q == "ARE YOU COMING FROM OR GOING TO YOGA" && a == "NO")
+        Node(question == "ARE YOU COMING FROM OR GOING TO YOGA" && answer == "NO")
     then
-        IOController.print("MOST PANTS AREN'T DOWNWARD DOG FRIENDLY");
+        showFinalMessage("MOST PANTS AREN'T DOWNWARD DOG FRIENDLY");
 end
 
 rule "ARE YOU COMING FROM OR GOING TO YOGA? - YES - NAMASTE."
     when
-        Node(q == "ARE YOU COMING FROM OR GOING TO YOGA?" && a == "YES")
+        Node(question == "ARE YOU COMING FROM OR GOING TO YOGA?" && answer == "YES")
     then
-        IOController.print("NAMASTE.");
+        showFinalMessage("NAMASTE.");
 end
