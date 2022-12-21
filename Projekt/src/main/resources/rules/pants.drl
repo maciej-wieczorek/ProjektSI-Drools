@@ -79,7 +79,7 @@ rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - YES - ARE THEY CONTROL T
         Node(q == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && a == "YES")
     then
         String question = "ARE THEY CONTROL TOP";
-    	String[] choices = {"YES"};
+    	String[] choices = {"NO", "YES"};
     	String answer = IOController.askQuestion(question, choices);
 		Node node = new Node(question, answer);
 
@@ -93,16 +93,11 @@ rule "ARE THEY CONTROL TOP - YES - GAAAH, YOU'RE WEARING TIGHTS!"
         IOController.print("GAAAH, YOU'RE WEARING TIGHTS!");
 end
 
-rule "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%? - NO - ARE THEY CONTROL TOP"
+rule "ARE THEY CONTROL TOP - NO - THAT'S A GOOD SIGN!"
     when
-        Node(q == "IS THE LYCRA/SPANDEX % HIGHER THAN THE COTTON%" && a == "NO")
+        Node(q == "ARE THEY CONTROL TOP" && a == "NO")
     then
-        String question = "ARE THEY CONTROL TOP";
-    	String[] choices = {"YES"};
-    	String answer = IOController.askQuestion(question, choices);
-		Node node = new Node(question, answer);
-
-    	insert(node);
+         IOController.print("THAT'S A GOOD SIGN!");
 end
 
 rule "ARE THEY MADE OF DENIM? - YES - BE HONEST IS IT STRETCHY JEGGING DENIM?"
