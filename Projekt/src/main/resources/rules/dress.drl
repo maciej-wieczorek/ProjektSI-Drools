@@ -169,7 +169,7 @@ rule "IS IT FLOWY AND HITS APPROXIMATELY MID - YES"
         Node(question == "IS IT FLOWY AND HITS APPROXIMATELY MID" && answer == "YES")
     then
     	Node node  = new Node();
-        node.setQuestion("ARE YOU BARE");
+        node.setQuestion("ARE YOU BARE-LEGGED");
         String[] options = {"NO", "YES"};
         node.setOptions(options);
         setAnswerGUI(node);
@@ -177,16 +177,16 @@ rule "IS IT FLOWY AND HITS APPROXIMATELY MID - YES"
         insert(node);
 end
 
-rule "ARE YOU BARE - NO"
+rule "ARE YOU BARE-LEGGED - NO"
     when
-        Node(question == "ARE YOU BARE" && answer == "NO")
+        Node(question == "ARE YOU BARE-LEGGED" && answer == "NO")
     then
         showFinalMessage("GURL, WORK THAT STUFF! YOU'RE DEFINITELY WEARING A DRESS.");
 end
 
-rule "ARE YOU BARE - YES"
+rule "ARE YOU BARE-LEGGED - YES"
     when
-        Node(question == "ARE YOU BARE" && answer == "YES")
+        Node(question == "ARE YOU BARE-LEGGED" && answer == "YES")
     then
         showFinalMessage("HONEY, THAT'S A TUNIC NOT A DRESS. FIND SOME LEGGINS NEXT TIME.");
 end
@@ -216,7 +216,7 @@ rule "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP? - YES"
     when
         Node(question == "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP" && answer == "YES")
     then
-        showFinalMessage("TWO FACED CLOTHING SHOULD NEVER BE TRUSTED. DITCH IT FAST");
+        showFinalMessage("TWO-FACED CLOTHING SHOULD NEVER BE TRUSTED. DITCH IT FAST");
 end
 
 rule "IS IT POSSIBLE YOUR DRESS COULD ACTUALLY BE A TUBE TOP? - MAYBE?"
